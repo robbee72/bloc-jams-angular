@@ -1,28 +1,24 @@
+myAppModule.config(function($stateProvider, $locationProvider) {
 
-(function() {
-     function config($stateProvider, $locationProvider) {
-       $locationProvider
-         .html5Mode({
-             enabled: true,
-             requireBase: false
-         });
-       
-       $stateProvider
-         .state('landing', {
-             url: '/',
-             templateUrl: '/templates/landing.html'
-         })
-          .state('collection', {
-             url: '/collection',
-             templateUrl: '/templates/collection.html'
-         })
-         .state('album', {
-             url: '/album',
-             templateUrl: '/templates/album.html'
-         });
-     }
-
-     angular
-         .module('blocJams', ['ui.router'])
-         .config(config);
- })();
+ 	    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+     	});
+     	
+		$stateProvider
+			.state('landing', {
+		    	url: '/landing',
+		    	controller: 'Landing.controller',
+		    	templateUrl: '/templates/landing.html'
+			})
+			.state('', {
+		        url: '/album',
+		        controller: 'Album.controller',
+		        templateUrl: '/templates/album.html'
+      		})
+      		.state('collection', {
+          		url: '/collection',
+          		controller: 'Collection.controller',
+          		templateUrl: '/templates/collection.html'
+      		});
+ });
