@@ -14,13 +14,14 @@
      <link rel="stylesheet" type="text/css" href="/styles/player_bar.css">
 
 </head>
-<body>  
+<body class="landing" ng-app="blcJams">  
     <nav class="navbar"> <!-- nav bar -->
             <a ui-sref="landing" class="logo">
              <img src="assets/images/bloc_jams_logo.png" alt="bloc jams logo">
             </a>
             <div class="links-container">
                 <a ui-sref="collection" class="navbar-link">collection</a>
+                 <a ui-sref="album" class="navbar-link">Album</a>
             </div>
          </nav>
     <ui-view></ui-view>
