@@ -9,7 +9,8 @@
      	
 		$stateProvider
 			.state('landing', {
-		    	url: '/landing',    	
+		    	url: '/',   
+                controller: 'LandingCtrl as landing',
 		    	templateUrl: '/templates/landing.html'
 			})
 			.state('album', {
@@ -18,6 +19,7 @@
       		})
       		.state('collection', {
           		url: '/collection',
+                controller: 'CollectionCtrl as collection',
           		templateUrl: '/templates/collection.html'
       		});
     }
