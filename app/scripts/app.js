@@ -9,22 +9,23 @@
      	
 		$stateProvider
 			.state('landing', {
-		    	url: '/',   
+		    	url: '/ ',   
                 controller: 'LandingCtrl as landing',
 		    	templateUrl: '/templates/landing.html'
 			})
-			.state('album', {
-		        url: '/album',
-		        templateUrl: '/templates/album.html'
-      		})
       		.state('collection', {
           		url: '/collection',
                 controller: 'CollectionCtrl as collection',
           		templateUrl: '/templates/collection.html'
+            })
+			.state('album', {
+		        url: '/album',
+                controller: 'AlbumCtrl as Album',
+		        templateUrl: '/templates/album.html'
       		});
     }
     
-    angular
-        .module('blocJams', ['ui.router'])
-        .config(config);
+        angular
+            .module('blocJams', ['ui.router'])
+            .config(config);
 })();
