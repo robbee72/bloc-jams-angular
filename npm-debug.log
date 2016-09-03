@@ -1,0 +1,178 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'grunt-cli',
+1 verbose cli   '--verbose' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose install initial load of /Users/krobnson/.npm-global/lib/package.json
+5 verbose readDependencies loading dependencies from /Users/krobnson/.npm-global/lib/package.json
+6 silly cache add args [ 'grunt-cli', null ]
+7 verbose cache add spec grunt-cli
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'grunt-cli',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'grunt-cli',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed grunt-cli@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for grunt-cli
+11 info addNameTag [ 'grunt-cli', 'latest' ]
+12 silly mapToRegistry name grunt-cli
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'grunt-cli',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'grunt-cli',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/grunt-cli
+17 verbose addNameTag registry:https://registry.npmjs.org/grunt-cli not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/grunt-cli
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 9:51:02 PM
+21 verbose request id 92e182694c6e6bc6
+22 verbose etag "ABE8SB1ZFYHVX64Z7EP8RJR0"
+23 http request GET https://registry.npmjs.org/grunt-cli
+24 http 304 https://registry.npmjs.org/grunt-cli
+25 verbose headers { date: 'Sat, 03 Sep 2016 04:51:02 GMT',
+25 verbose headers   via: '1.1 varnish',
+25 verbose headers   'cache-control': 'max-age=300',
+25 verbose headers   etag: '"ABE8SB1ZFYHVX64Z7EP8RJR0"',
+25 verbose headers   age: '0',
+25 verbose headers   connection: 'keep-alive',
+25 verbose headers   'x-served-by': 'cache-sjc3627-SJC',
+25 verbose headers   'x-cache': 'HIT',
+25 verbose headers   'x-cache-hits': '1',
+25 verbose headers   'x-timer': 'S1472878262.299492,VS0,VE132',
+25 verbose headers   vary: 'Accept-Encoding' }
+26 silly get cb [ 304,
+26 silly get   { date: 'Sat, 03 Sep 2016 04:51:02 GMT',
+26 silly get     via: '1.1 varnish',
+26 silly get     'cache-control': 'max-age=300',
+26 silly get     etag: '"ABE8SB1ZFYHVX64Z7EP8RJR0"',
+26 silly get     age: '0',
+26 silly get     connection: 'keep-alive',
+26 silly get     'x-served-by': 'cache-sjc3627-SJC',
+26 silly get     'x-cache': 'HIT',
+26 silly get     'x-cache-hits': '1',
+26 silly get     'x-timer': 'S1472878262.299492,VS0,VE132',
+26 silly get     vary: 'Accept-Encoding' } ]
+27 verbose etag https://registry.npmjs.org/grunt-cli from cache
+28 verbose get saving grunt-cli to /Users/krobnson/.npm/registry.npmjs.org/grunt-cli/.cache.json
+29 verbose correctMkdir /Users/krobnson/.npm correctMkdir not in flight; initializing
+30 silly addNameTag next cb for grunt-cli with tag latest
+31 silly addNamed grunt-cli@1.2.0
+32 verbose addNamed "1.2.0" is a plain semver version for grunt-cli
+33 silly cache afterAdd grunt-cli@1.2.0
+34 verbose afterAdd /Users/krobnson/.npm/grunt-cli/1.2.0/package/package.json not in flight; writing
+35 verbose correctMkdir /Users/krobnson/.npm correctMkdir not in flight; initializing
+36 verbose afterAdd /Users/krobnson/.npm/grunt-cli/1.2.0/package/package.json written
+37 silly install resolved [ { name: 'grunt-cli',
+37 silly install resolved     description: 'The grunt command line interface',
+37 silly install resolved     version: '1.2.0',
+37 silly install resolved     author:
+37 silly install resolved      { name: 'Grunt Development Team',
+37 silly install resolved        url: 'http://gruntjs.com/development-team' },
+37 silly install resolved     repository:
+37 silly install resolved      { type: 'git',
+37 silly install resolved        url: 'git+https://github.com/gruntjs/grunt-cli.git' },
+37 silly install resolved     license: 'MIT',
+37 silly install resolved     engines: { node: '>=0.10.0' },
+37 silly install resolved     scripts: { test: 'node bin/grunt test' },
+37 silly install resolved     bin: { grunt: 'bin/grunt' },
+37 silly install resolved     dependencies:
+37 silly install resolved      { 'findup-sync': '~0.3.0',
+37 silly install resolved        'grunt-known-options': '~1.1.0',
+37 silly install resolved        nopt: '~3.0.6',
+37 silly install resolved        resolve: '~1.1.0' },
+37 silly install resolved     devDependencies: { grunt: '~0.4.5', 'grunt-contrib-jshint': '~1.0.0' },
+37 silly install resolved     files: [ 'bin', 'completion', 'lib' ],
+37 silly install resolved     appveyor_id: 'prp6g944b05jsq6d',
+37 silly install resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+37 silly install resolved     gitHead: 'edd8bd29a72f2f28b63fe2629fcb7b9d9f2feb46',
+37 silly install resolved     bugs: { url: 'https://github.com/gruntjs/grunt-cli/issues' },
+37 silly install resolved     homepage: 'https://github.com/gruntjs/grunt-cli#readme',
+37 silly install resolved     _id: 'grunt-cli@1.2.0',
+37 silly install resolved     _shasum: '562b119ebb069ddb464ace2845501be97b35b6a8',
+37 silly install resolved     _from: 'grunt-cli@latest',
+37 silly install resolved     _npmVersion: '3.8.2',
+37 silly install resolved     _nodeVersion: '4.2.3',
+37 silly install resolved     _npmUser: { name: 'vladikoff', email: 'vlad@vladikoff.com' },
+37 silly install resolved     dist:
+37 silly install resolved      { shasum: '562b119ebb069ddb464ace2845501be97b35b6a8',
+37 silly install resolved        tarball: 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-1.2.0.tgz' },
+37 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+37 silly install resolved     _npmOperationalInternal:
+37 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+37 silly install resolved        tmp: 'tmp/grunt-cli-1.2.0.tgz_1459558434299_0.8824446983635426' },
+37 silly install resolved     directories: {},
+37 silly install resolved     _resolved: 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-1.2.0.tgz',
+37 silly install resolved     readme: 'ERROR: No README data found!' } ]
+38 info install grunt-cli@1.2.0 into /Users/krobnson/.npm-global/lib
+39 info installOne grunt-cli@1.2.0
+40 verbose installOne of grunt-cli to /Users/krobnson/.npm-global/lib not in flight; installing
+41 verbose correctMkdir /Users/krobnson/.npm/_locks correctMkdir not in flight; initializing
+42 verbose lock using /Users/krobnson/.npm/_locks/grunt-cli-f4a9748a81d73e22.lock for /Users/krobnson/.npm-global/lib/node_modules/grunt-cli
+43 silly install write writing grunt-cli 1.2.0 to /Users/krobnson/.npm-global/lib/node_modules/grunt-cli
+44 verbose unbuild lib/node_modules/grunt-cli
+45 info preuninstall grunt-cli@1.2.0
+46 info uninstall grunt-cli@1.2.0
+47 verbose unbuild rmStuff grunt-cli@1.2.0 from /Users/krobnson/.npm-global/lib/node_modules
+48 silly gentlyRm /Users/krobnson/.npm-global/bin/grunt is being gently removed
+49 silly gentlyRm verifying /Users/krobnson/.npm-global is an npm working directory
+50 silly gentlyRm containing path /Users/krobnson/.npm-global is under npm's control, in /Users/krobnson/.npm-global
+51 silly gentlyRm deletion target /Users/krobnson/.npm-global/bin/grunt is under /Users/krobnson/.npm-global
+52 verbose gentlyRm vacuuming from /Users/krobnson/.npm-global/bin/grunt up to /Users/krobnson/.npm-global
+53 silly vacuum-fs removing /Users/krobnson/.npm-global/bin/grunt
+54 silly vacuum-fs quitting because other entries in /Users/krobnson/.npm-global/bin
+55 info postuninstall grunt-cli@1.2.0
+56 silly gentlyRm /Users/krobnson/.npm-global/lib/node_modules/grunt-cli is being purged from base /Users/krobnson/.npm-global
+57 verbose gentlyRm don't care about contents; nuking /Users/krobnson/.npm-global/lib/node_modules/grunt-cli
+58 silly vacuum-fs purging /Users/krobnson/.npm-global/lib/node_modules/grunt-cli
+59 verbose unlock done using /Users/krobnson/.npm/_locks/grunt-cli-f4a9748a81d73e22.lock for /Users/krobnson/.npm-global/lib/node_modules/grunt-cli
+60 verbose stack Error: EACCES: permission denied, unlink '/Users/krobnson/.npm-global/lib/node_modules/grunt-cli/CHANGELOG.md'
+60 verbose stack     at Error (native)
+61 verbose cwd /Users/krobnson/bloc/bloc-jams-angular
+62 error Darwin 15.6.0
+63 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "grunt-cli" "--verbose"
+64 error node v4.5.0
+65 error npm  v2.15.9
+66 error path /Users/krobnson/.npm-global/lib/node_modules/grunt-cli/CHANGELOG.md
+67 error code EACCES
+68 error errno -13
+69 error syscall unlink
+70 error Error: EACCES: permission denied, unlink '/Users/krobnson/.npm-global/lib/node_modules/grunt-cli/CHANGELOG.md'
+70 error     at Error (native)
+70 error  { [Error: EACCES: permission denied, unlink '/Users/krobnson/.npm-global/lib/node_modules/grunt-cli/CHANGELOG.md']
+70 error   errno: -13,
+70 error   code: 'EACCES',
+70 error   syscall: 'unlink',
+70 error   path: '/Users/krobnson/.npm-global/lib/node_modules/grunt-cli/CHANGELOG.md' }
+71 error Please try running this command again as root/Administrator.
+72 verbose exit [ -13, true ]
+73 verbose unbuild lib/node_modules/grunt-cli
+74 info preuninstall grunt-cli@1.2.0
+75 info uninstall grunt-cli@1.2.0
+76 verbose unbuild rmStuff grunt-cli@1.2.0 from /Users/krobnson/.npm-global/lib/node_modules
+77 silly gentlyRm /Users/krobnson/.npm-global/bin/grunt is being gently removed
+78 silly gentlyRm verifying /Users/krobnson/.npm-global is an npm working directory
+79 silly gentlyRm containing path /Users/krobnson/.npm-global is under npm's control, in /Users/krobnson/.npm-global
+80 silly gentlyRm deletion target /Users/krobnson/.npm-global/bin/grunt is under /Users/krobnson/.npm-global
+81 verbose gentlyRm vacuuming from /Users/krobnson/.npm-global/bin/grunt up to /Users/krobnson/.npm-global
+82 info postuninstall grunt-cli@1.2.0
+83 silly gentlyRm /Users/krobnson/.npm-global/lib/node_modules/grunt-cli is being purged from base /Users/krobnson/.npm-global
+84 verbose gentlyRm don't care about contents; nuking /Users/krobnson/.npm-global/lib/node_modules/grunt-cli
+85 silly vacuum-fs purging /Users/krobnson/.npm-global/lib/node_modules/grunt-cli
+86 error error rolling back Error: EACCES: permission denied, unlink '/Users/krobnson/.npm-global/lib/node_modules/grunt-cli/CHANGELOG.md'
+86 error error rolling back     at Error (native)
+86 error error rolling back  { [Error: EACCES: permission denied, unlink '/Users/krobnson/.npm-global/lib/node_modules/grunt-cli/CHANGELOG.md']
+86 error error rolling back   errno: -13,
+86 error error rolling back   code: 'EACCES',
+86 error error rolling back   syscall: 'unlink',
+86 error error rolling back   path: '/Users/krobnson/.npm-global/lib/node_modules/grunt-cli/CHANGELOG.md' }
