@@ -1,5 +1,4 @@
 (function() {
-    
     function config($stateProvider, $locationProvider) {
 
  	    $locationProvider.html5Mode({
@@ -9,7 +8,7 @@
      	
 		$stateProvider
 			.state('landing', {
-		    	url: '/ ',   
+		    	url: '/',   
                 controller: 'LandingCtrl as landing',
 		    	templateUrl: '/templates/landing.html'
 			})

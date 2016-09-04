@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## Bloc Frontend Project Starter
 
 A starter application for student projects in Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp).
@@ -166,4 +166,4 @@ A list of the Grunt plugins in this application.
 =======
 # bloc-jams-angular
 angular 
->>>>>>> c078a04bb69a41d1f8fd52f88e6c42cb93226f9d
+
