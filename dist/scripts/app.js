@@ -1,5 +1,4 @@
 (function() {
-    
     function config($stateProvider, $locationProvider) {
 
  	    $locationProvider.html5Mode({
@@ -9,7 +8,7 @@
      	
 		$stateProvider
 			.state('landing', {
-		    	url: '/ ',   
+		    	url: '/',   
                 controller: 'LandingCtrl as landing',
 		    	templateUrl: '/templates/landing.html'
 			})
@@ -20,7 +19,7 @@
             })
 			.state('album', {
 		        url: '/album',
-                controller: 'AlbumCtrl as Album',
+                controller: 'AlbumCtrl as album',
 		        templateUrl: '/templates/album.html'
       		});
     }
