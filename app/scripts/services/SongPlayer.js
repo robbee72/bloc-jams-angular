@@ -16,7 +16,7 @@
     }
 
     currentBuzzObject = new buzz.sound(song.audioUrl, {
-      formats: ['mp3'],
+      formats: ['mp3','acc', 'wav'],
       preload: true
     });
 
@@ -112,10 +112,9 @@
       var currentSongIndex = getSongIndex(SongPlayer.currentSong);
       currentSongIndex++;
 
-      if (currentSongIndex >= currentAlbum.songs.length) {
+      if (currentSongIndex >= currentAlbum.songs.duration) {
         stopSong(SongPlayer.currentSong);
-      }
-      else {
+      } else {
         var song = currentAlbum.songs[currentSongIndex];
         setSong(song);
         playSong(song);

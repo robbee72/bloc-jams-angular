@@ -8,7 +8,7 @@
            year: '2016',
            albumArtUrl: 'assets/images/album_covers/cheeseHead.png',
          songs: [
-             { title: 'Blue', duration: '161.71', audioUrl: '/assets/music/blue' },
+             { title: 'Strobe piano version', duration: '462.71', audioUrl: '/assets/music/strobe' },
              { title: 'Green', duration: '103.96', audioUrl: '/assets/music/green' },
              { title: 'Red', duration: '268.45', audioUrl: '/assets/music/red' },
              { title: 'Pink', duration: '153.14', audioUrl: '/assets/music/pink' },
