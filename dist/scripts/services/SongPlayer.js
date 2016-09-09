@@ -10,7 +10,7 @@
 
       if (SongPlayer.currentSong)
       {
-        SongPlayer.currentSong.playing = null;
+    SongPlayer.currentSong.playing = null;
       }
 
     }
@@ -98,13 +98,12 @@
       currentSongIndex--;
 
       if (currentSongIndex < 0) {
-        stopSong(SongPlayer.currentSong);
+        currentSongIndex = currentAlbum.songs.length - 1;
       }
-      else {
         var song = currentAlbum.songs[currentSongIndex];
         setSong(song);
         playSong(song);
-      }
+    
 
     };
 
@@ -112,13 +111,21 @@
       var currentSongIndex = getSongIndex(SongPlayer.currentSong);
       currentSongIndex++;
 
-      if (currentSongIndex >= currentAlbum.songs.duration) {
-        stopSong(SongPlayer.currentSong);
-      } else {
+      if (currentSongIndex >= currentAlbum.songs.length) {
+          
+          /// here is where the change for next song to autoplay
+          /* it should not stop unless click-on 
+          setSong(song);
+          playSong(song);     
+        playNextSong(SongPlayer.currentSong);*/
+          currentSongIndex = 0
+//          stopSong(SongPlayer.currentSong); 
+//      } else {
+      }
         var song = currentAlbum.songs[currentSongIndex];
         setSong(song);
         playSong(song);
-      }
+//      }
 
     };
 
