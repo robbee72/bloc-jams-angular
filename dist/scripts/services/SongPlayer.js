@@ -34,6 +34,10 @@
       });
     });
 
+    currentBuzzObject.bind('ended', function(event) {
+                SongPlayer.next();
+    });
+        
     SongPlayer.currentSong = song;
 
     };
@@ -41,14 +45,14 @@
     var playSong = function(song) {
       currentBuzzObject.play();
       song.playing = true;
+        
       SongPlayer.currentAlbum = currentAlbum;
     };
 
     var stopSong = function(song) {
       currentBuzzObject.pause();
       song.playing = null;
-      SongPlayer.currentAlbum = null;
-      SongPlayer.currentSong = null;
+      
     };
 
   
@@ -59,15 +63,15 @@
     SongPlayer.currentSong = null;
     SongPlayer.currentAlbum = null;
     SongPlayer.currentTime = null;
-    SongPlayer.volume = null;
+    SongPlayer.volume = 40;
+    SongPlayer.muted = false;
   
     SongPlayer.play = function(song) {
       song = song || SongPlayer.currentSong;
       if (SongPlayer.currentSong !== song) {
         setSong(song);
         playSong(song);
-      }
-      else if (SongPlayer.currentSong === song) {
+      } else if (SongPlayer.currentSong === song) {
         if (currentBuzzObject.isPaused()) {
           currentBuzzObject.play();
         }
@@ -86,6 +90,18 @@
         currentBuzzObject.setVolume(volume)
       }
     };
+      
+      SongPlayer.setMute = function() {
+            if (currentBuzzObject) {
+                if (!currentBuzzObject.isMuted()) {
+                    currentBuzzObject.mute();
+                    SongPlayer.muted = true;
+                } else {
+                    currentBuzzObject.unmute();
+                    SongPlayer.muted = false;
+                }
+            }
+        }
 
     SongPlayer.pause = function(song) {
       song = song || SongPlayer.currentSong;
@@ -107,27 +123,18 @@
 
     };
 
-    SongPlayer.next = function() {
-      var currentSongIndex = getSongIndex(SongPlayer.currentSong);
-      currentSongIndex++;
-
-      if (currentSongIndex >= currentAlbum.songs.length) {
-          
-          /// here is where the change for next song to autoplay
-          /* it should not stop unless click-on 
-          setSong(song);
-          playSong(song);     
-        playNextSong(SongPlayer.currentSong);*/
-          currentSongIndex = 0
-//          stopSong(SongPlayer.currentSong); 
-//      } else {
-      }
-        var song = currentAlbum.songs[currentSongIndex];
-        setSong(song);
-        playSong(song);
-//      }
-
-    };
+   SongPlayer.next = function() {
+			var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+			currentSongIndex++;
+			
+			if (currentSongIndex >= currentAlbum.songs.length) {
+				stopSong(SongPlayer.currentSong);
+			} else {
+				var song = currentAlbum.songs[currentSongIndex];
+				setSong(song);
+				playSong(song);
+			}
+		};
 
     return SongPlayer;
   }
