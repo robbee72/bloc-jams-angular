@@ -31,11 +31,14 @@
     currentBuzzObject.bind('volumechange', function() {
       $rootScope.$apply(function() {
           if(SongPlayer.muted){
-               SongPlayer.volume = 0;
-           } else {
-             SongPlayer.volume = currentBuzzObject.getVolume();   
-           }        
-         });
+              SongPlayer.volume = 0;
+              
+          } else {
+              SongPlayer.volume = currentBuzzObject.getVolume();
+              
+          }
+    
+      });
     });
 
     currentBuzzObject.bind('ended', function(event) {
@@ -77,7 +80,7 @@
         playSong(song);
       } else if (SongPlayer.currentSong === song) {
         if (currentBuzzObject.isPaused()) {
-          playSong(song);
+            playSong(song);
             //currentBuzzObject.play();
         }
       }
@@ -95,8 +98,7 @@
         currentBuzzObject.setVolume(volume)
         //        SongPlayer.volume = volume;
          SongPlayer.muted = false;  
-          currentBuzzObject.unmute();
-
+         currentBuzzObject.unmute();
       }
     };
       
